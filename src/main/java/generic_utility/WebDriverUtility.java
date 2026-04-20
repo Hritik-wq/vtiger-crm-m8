@@ -317,9 +317,24 @@ public class WebDriverUtility {
 	public void JseScrollBy(int x, int y) {
 		jse.executeScript("window.scrollBy(0, 0)");
 	}
+	
+	public void JsescrollIntoView(WebElement element) {
+		jse.executeScript("arguments[0].scrollIntoView();", element);
+	}
 
 	public void JseDocument() {
 		System.out.println(jse.executeScript("return document.title"));
+	}
+	
+	public void switchToWindowByTitle(String partialWindowTitle) {
+		Set<String> windowHandles = driver.getWindowHandles();
+		
+		for (String handle : windowHandles) {
+			driver.switchTo().window(handle);
+			if (driver.getTitle().contains(partialWindowTitle)) {
+				break;
+			}
+		}
 	}
 
 	public void switchToWindowByUrl(String partialUrl) {
@@ -399,6 +414,14 @@ public class WebDriverUtility {
 
 	public void jsValue(WebElement element) {
 		jse.executeScript("arguments[0].value='Value to be Passed';", element);
+	}
+	
+	public void jsScrollTop() {
+		jse.executeScript("window.scrollTo(0, 0);");
+	}
+	
+	public void jsScrollBottom() {
+		jse.executeScript("window.scrollTo(0, document.body.scrollHeight);");
 	}
 
 	public WebElement getCssValue(String string) {
