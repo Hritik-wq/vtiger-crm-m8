@@ -41,6 +41,7 @@ public class Facebook {
     }
 
     public static void main(String[] args) throws InterruptedException {
+    	
     	//To utilize the WebElement
         WebDriver driver = new ChromeDriver();
         driver.get("https://www.facebook.com/");
