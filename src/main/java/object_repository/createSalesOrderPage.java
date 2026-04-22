@@ -37,12 +37,24 @@ public class createSalesOrderPage {
 		return SalesName;
 	}
 	
-	public WebElement selectOrgzName() {
+	public WebElement clickOrgzcreate() {
 		return selectOrgz;
 	}
 	
 	public WebElement clickOrgzName() {
 		return clickorgzName;
+	}
+	
+	public WebElement clickItemName() {
+		return itemName;
+	}
+	
+	public WebElement selectProdName() {
+		return prodName;
+	}
+	
+	public WebElement enterQty() {
+		return qty;
 	}
 	
 	public WebElement saveBtn() {
