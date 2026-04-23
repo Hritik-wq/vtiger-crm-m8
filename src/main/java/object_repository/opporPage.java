@@ -11,9 +11,16 @@ public class opporPage {
 
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(linkText = "Opportunities")
+	private WebElement OppTab;
 
-	@FindBy(css = "//img[alt='Create Opportunity...']")
+	@FindBy(css = "img[alt='Create Opportunity...']")
 	private WebElement plus;
+	
+	public WebElement opporClick() {
+		return OppTab;
+	}
 	
 	public WebElement plusOpporBtn() {
 		return plus;
@@ -21,6 +28,7 @@ public class opporPage {
 	
 //	business utility
 	public void oppor() {
+		OppTab.click();
 		plus.click();
 	}
 

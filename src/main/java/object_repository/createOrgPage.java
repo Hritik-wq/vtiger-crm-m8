@@ -15,7 +15,7 @@ public class createOrgPage {
 	@FindBy(name = "accountname")
 	private WebElement OrgName;
 	
-	@FindBy(css="input[type='submit'][value='  Save  ']")
+	@FindBy(css="input[type='button'][value='  Save  ']")
 	private WebElement saveBtn;
 	
 	public WebElement getOrgName() {

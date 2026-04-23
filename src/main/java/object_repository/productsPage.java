@@ -11,9 +11,16 @@ public class productsPage {
 
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(linkText = "Products")
+	private WebElement ProdTab;
 
-	@FindBy(css = "//img[alt='Create Product...']")
+	@FindBy(css = "img[alt='Create Product...']")
 	private WebElement plus;
+	
+	public WebElement clickproducts() {
+		return ProdTab;
+	}
 	
 	public WebElement plusProductsBtn() {
 		return plus;
@@ -21,6 +28,7 @@ public class productsPage {
 	
 //	business utility
 	public void product() {
+		ProdTab.click();
 		plus.click();
 	}
 

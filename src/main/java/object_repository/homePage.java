@@ -14,7 +14,7 @@ public class homePage {
 	@FindBy(linkText = "Opportunities")
 	private WebElement OpporTab;
 	
-	@FindBy(xpath = "//img[@src='themes/softed/images/user.PNG']")
+	@FindBy(css = "img[src='themes/softed/images/user.PNG']")
 	private WebElement ProfileIntf;
 	
 	@FindBy(linkText="Sign Out")

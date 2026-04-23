@@ -11,9 +11,16 @@ public class orgPage {
 
 		PageFactory.initElements(driver, this);
 	}
+	
+	@FindBy(linkText = "Organizations")
+	private WebElement OrgTab;
 
-	@FindBy(css = "//img[alt='Create Organization...']")
+	@FindBy(css = "img[alt='Create Organization...']")
 	private WebElement plus;
+	
+	public WebElement orgClick() {
+		return OrgTab;
+	}
 	
 	public WebElement plusOrgBtn() {
 		return plus;
@@ -21,6 +28,7 @@ public class orgPage {
 	
 //	business utility
 	public void org() {
+		OrgTab.click();
 		plus.click();
 	}
 

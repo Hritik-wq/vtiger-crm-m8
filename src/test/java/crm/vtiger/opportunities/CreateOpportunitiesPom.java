@@ -10,9 +10,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import generic_utility.FileUtility;
-import object_repository.loginPage;
+import object_repository.createOpporPage;
+import object_repository.opporPage;
 
-public class CreateOpportunities {
+public class CreateOpportunitiesPom {
 	public static void main(String[] args) throws InterruptedException, IOException {
 //		opening browser		
 		WebDriver driver = new ChromeDriver();
@@ -32,31 +33,31 @@ public class CreateOpportunities {
 //		login
 		driver.get(URL);
 
-		// Handles un, pwd, and loginBtn internally
-		loginPage lp = new loginPage(driver);
-		lp.login(USERNAME, PASSWORD);
+		WebElement un = driver.findElement(By.name("user_name"));
+		un.sendKeys(USERNAME);
 
-//		Click Opportunities
-		driver.findElement(By.linkText("Opportunities")).click();
+		WebElement pwd = driver.findElement(By.name("user_password"));
+		pwd.sendKeys(PASSWORD);
+		WebElement loginBtn = driver.findElement(By.id("submitButton"));
+		loginBtn.click();
 
-		// Create Opportunity
-		driver.findElement(By.cssSelector("img[alt='Create Opportunity...']")).click();
-
+		// Select Opportunity
+		opporPage oppOR = new opporPage(driver);
+		oppOR.oppor();
+		
 //		fill form
-		WebElement opporField = driver.findElement(By.name("potentialname"));
-
-		// Load test data from Excel for opportunityName
+		createOpporPage copP = new createOpporPage(driver);
 		String orgName = fUtil.getDatafromExcelFile("testdata", 1, 1);
-
-		opporField.sendKeys(orgName);
+		copP.getOpporName().sendKeys(orgName);
+		copP.relatedTo().click();
+		
+		copP.saveBtn().click();
 
 		// Need to Change Window to select Link
 
 		String parentWindow = driver.getWindowHandle();
-
-		WebElement relatedField = driver.findElement(By.cssSelector("img[alt='Select']"));
-
-		relatedField.click();
+		
+		copP.selectRelatedTo().click();
 
 		Set<String> allWindows = driver.getWindowHandles();
 
