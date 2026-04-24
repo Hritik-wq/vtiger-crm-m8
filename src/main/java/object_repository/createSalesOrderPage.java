@@ -15,7 +15,7 @@ public class createSalesOrderPage {
 	@FindBy(name = "subject")
 	private WebElement SalesName;
 	
-	@FindBy(css="img[alt='Select']")
+	@FindBy(xpath="//img[@src='themes/softed/images/select.gif' and contains(@onclick, 'window.open')]")
 	private WebElement selectOrgz;
 	
 	@FindBy(linkText="vtiger")

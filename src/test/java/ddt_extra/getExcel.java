@@ -25,7 +25,7 @@ public class getExcel {
 		Row row = sheet.getRow(2);
 		
 		// Get access of Cell
-		Cell cell = row.getCell(4);
+		Cell cell = row.getCell(8);
 
 		// Get the data
 		String data = cell.getStringCellValue();

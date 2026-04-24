@@ -7,11 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
-
 import generic_utility.FileUtility;
 import object_repository.createOpporPage;
+import object_repository.homePage;
+import object_repository.loginPage;
 import object_repository.opporPage;
+import object_repository.verifyOpporPage;
 
 public class CreateOpportunitiesPom {
 	public static void main(String[] args) throws InterruptedException, IOException {
@@ -33,31 +34,25 @@ public class CreateOpportunitiesPom {
 //		login
 		driver.get(URL);
 
-		WebElement un = driver.findElement(By.name("user_name"));
-		un.sendKeys(USERNAME);
-
-		WebElement pwd = driver.findElement(By.name("user_password"));
-		pwd.sendKeys(PASSWORD);
-		WebElement loginBtn = driver.findElement(By.id("submitButton"));
-		loginBtn.click();
+		// Handles un, pwd, and loginBtn internally
+		loginPage lp = new loginPage(driver);
+		lp.login(USERNAME, PASSWORD);
 
 		// Select Opportunity
 		opporPage oppOR = new opporPage(driver);
 		oppOR.oppor();
-		
+
 //		fill form
 		createOpporPage copP = new createOpporPage(driver);
 		String orgName = fUtil.getDatafromExcelFile("testdata", 1, 1);
 		copP.getOpporName().sendKeys(orgName);
-		copP.relatedTo().click();
-		
-		copP.saveBtn().click();
 
 		// Need to Change Window to select Link
 
 		String parentWindow = driver.getWindowHandle();
-		
-		copP.selectRelatedTo().click();
+
+		// Select Related To
+		copP.relatedTo().click();
 
 		Set<String> allWindows = driver.getWindowHandles();
 
@@ -75,33 +70,20 @@ public class CreateOpportunitiesPom {
 		}
 
 		// Load test data from Excel for realtedField
-		String relatedTo = fUtil.getDatafromExcelFile("testdata", 1, 3);
-
-		driver.findElement(By.linkText(relatedTo)).click();
+		fUtil.getDatafromExcelFile("testdata", 1, 3);
+		copP.selectRelatedTo().click();
 
 		Thread.sleep(3000);
 
 		// Switch back to parent
 		driver.switchTo().window(parentWindow);
 
-		// Assigned To Radio Button
-		driver.findElement(By.xpath("//input[@type='radio'][1]"));
-
-		// To select Specific Value from Sales Stage Dropdown
-		WebElement salesStage = driver.findElement(By.name("sales_stage"));
-
-		// Load test data from Excel for Sales Stage
-		String stage = fUtil.getDatafromExcelFile("testdata", 2, 4);
-
-		Select sel = new Select(salesStage);
-
-		sel.selectByValue(stage);
-
 		// To Click on Save Button
-		driver.findElement(By.cssSelector("input[type='submit'][value='  Save  ']")).click();
+		copP.saveBtn().click();
 
 		// verify organization
-		String actOrgName = driver.findElement(By.id("dtlview_Opportunity Name")).getText();
+		verifyOpporPage vfyOppor = new verifyOpporPage(driver);
+		String actOrgName = vfyOppor.getOpporText().getText();
 
 		if (actOrgName.equals(orgName)) {
 			System.out.println("Opportunity created successfullyy !!!!");
@@ -109,11 +91,10 @@ public class CreateOpportunitiesPom {
 			System.out.println("Better luck next time... Dingeshhh");
 		}
 
-		// logout
-		WebElement profileIcon = driver.findElement(By.cssSelector("img[src='themes/softed/images/user.PNG']"));
-		profileIcon.click();
-
-		driver.findElement(By.linkText("Sign Out")).click();
+		// Logout
+		homePage hP = new homePage(driver);
+		hP.ClickProfile().click();
+		hP.logoutBtn().click();
 
 		// browser close
 		Thread.sleep(3000);
