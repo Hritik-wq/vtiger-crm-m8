@@ -44,7 +44,7 @@ public class orgPageTest {
 	public void org() {
 		OrgTab.click();
 		plus.click();
-		plusAlt.click
+		plusAlt.click();
 	}
 
 }
