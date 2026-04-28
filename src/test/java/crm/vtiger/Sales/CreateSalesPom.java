@@ -3,6 +3,8 @@ package crm.vtiger.Sales;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Set;
+
+import org.junit.Test;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import generic_utility.FileUtility;
+import junit.framework.Assert;
 import object_repository.createSalesOrderPage;
 import object_repository.homePage;
 import object_repository.loginPage;
@@ -18,7 +21,10 @@ import object_repository.salesOrder;
 import object_repository.verifySalesOrder;
 
 public class CreateSalesPom {
-	public static void main(String[] args) throws InterruptedException, IOException {
+	
+	@Test
+	
+	public void createSalesOrderTest() throws IOException, InterruptedException {
 
 //		opening browser		
 		WebDriver driver = new ChromeDriver();
@@ -132,12 +138,14 @@ public class CreateSalesPom {
 //		verify Sales
 		verifySalesOrder vfySO = new verifySalesOrder(driver);
 		String actSaleName = vfySO.getSalesText().getText();
+		
+		Assert.assertEquals(actSaleName, actSalesName);
 
-		if (actSaleName.equals(actSalesName)) {
-			System.out.println("Sales Order created successfullyy !!!!");
-		} else {
-			System.out.println("Better luck next time... Dingeshhh");
-		}
+//		if (actSaleName.equals(actSalesName)) {
+//			System.out.println("Sales Order created successfullyy !!!!");
+//		} else {
+//			System.out.println("Better luck next time... Dingeshhh");
+//		}
 
 //		// Logout
 		homePage hP = new homePage(driver);
