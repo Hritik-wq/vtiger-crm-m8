@@ -1,6 +1,7 @@
 package helper_att;
 
 import org.testng.annotations.Test;
+import org.junit.Assert;
 import org.testng.Reporter;
 
 public class sampleDependson {
@@ -12,6 +13,8 @@ public class sampleDependson {
 
     @Test(dependsOnMethods = "createCity")
     public void modifyCity() {
+    	// To Check if Skips
+    	Assert.assertTrue(false);
         Reporter.log("Noida=>SmartNoida", true);
     }
 
@@ -19,4 +22,11 @@ public class sampleDependson {
     public void deleteCity() {
         Reporter.log("SmartNoida deleted", true);
     }
+    
+//    @Test()
+//    public void deleteCity() {
+//        Reporter.log("Noida=>SmartNoida", true);
+//        Reporter.log("SmartNoida deleted", true);
+//    }
+    
 }

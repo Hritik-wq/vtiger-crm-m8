@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="learning_assertion.HardAssert">
+      <class name="helper_att.sampleDependson">
         <methods>
-          <include name="case1"/>
+          <include name="modifyCity"/>
+          <include name="createCity"/>
         </methods>
-      </class> <!-- learning_assertion.HardAssert -->
+      </class> <!-- helper_att.sampleDependson -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
