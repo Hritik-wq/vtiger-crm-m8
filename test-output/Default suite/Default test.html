@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Apr 29 08:18:30 IST 2026</td>
+<td>Started on:</td><td>Wed Apr 29 19:47:12 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (66 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (39 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,19 +76,15 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='helper_att.sampleDependson.modifyCity()'><b>modifyCity</b><br>Test class: helper_att.sampleDependson</td>
-<td><div><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:92)
-	at org.junit.Assert.assertTrue(Assert.java:43)
-	at org.junit.Assert.assertTrue(Assert.java:54)
-	at helper_att.sampleDependson.modifyCity(sampleDependson.java:17)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+<td title='helper_att.LearningDataProvider.fbLogin()'><b>fbLogin</b><br>Test class: helper_att.LearningDataProvider</td>
+<td><div><pre>org.testng.TestNGException: 
+Method public void helper_att.LearningDataProvider.fbLogin(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : getData
+	at org.testng.internal.Parameters.findDataProvider(Parameters.java:532)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -108,19 +104,15 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1813187653", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1813187653'><pre>java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:92)
-	at org.junit.Assert.assertTrue(Assert.java:43)
-	at org.junit.Assert.assertTrue(Assert.java:54)
-	at helper_att.sampleDependson.modifyCity(sampleDependson.java:17)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+</pre></div><a href='#' onClick='toggleBox("stack-trace960733886", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace960733886'><pre>org.testng.TestNGException: 
+Method public void helper_att.LearningDataProvider.fbLogin(java.lang.String,java.lang.String) throws java.lang.InterruptedException requires a @DataProvider named : getData
+	at org.testng.internal.Parameters.findDataProvider(Parameters.java:532)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:769)
+	at org.testng.internal.Parameters.handleParameters(Parameters.java:734)
+	at org.testng.internal.invokers.ParameterHandler.handleParameters(ParameterHandler.java:72)
+	at org.testng.internal.invokers.ParameterHandler.createParameters(ParameterHandler.java:51)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:949)
 	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
 	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
 	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
@@ -142,40 +134,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 </pre></div></td>
 <td>0</td>
-<td>helper_att.sampleDependson@515c6049</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td><b>Attribute(s)</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='helper_att.sampleDependson.createCity()'><b>createCity</b><br>Test class: helper_att.sampleDependson<br/>
-<a href="#Output-1373419525" onClick='toggleBox("Output-1373419525", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1373419525" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1373419525">
-created Noida<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>helper_att.sampleDependson@515c6049</td></tr>
-<tr>
-<td title='helper_att.sampleDependson.deleteCity()'><b>deleteCity</b><br>Test class: helper_att.sampleDependson<br/>
-<a href="#Output-1353530305" onClick='toggleBox("Output-1353530305", this, "Show output", "Hide output");'>Show output</a>
-
-<a href="#Output-1353530305" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1353530305">
-SmartNoida deleted<br/>
-</div>
-</td>
-<td></td>
-<td>0</td>
-<td>helper_att.sampleDependson@515c6049</td></tr>
+<td>helper_att.LearningDataProvider@765d7657</td></tr>
 </table><p>
 </body>
 </html>
