@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="type_of_execution.OrgTest"/>
+      <class name="type_of_execution.ContactTest">
+       <methods>
+       <include name = "modifyContactTest"/>
+       <exclude name="deleteContactTest"/>
+       </methods>
+      </class>
+      <class name="type_of_execution.LeadTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
