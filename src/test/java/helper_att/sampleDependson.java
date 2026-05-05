@@ -11,14 +11,14 @@ public class sampleDependson {
         Reporter.log("created Noida", true);
     }
 
-    @Test(dependsOnMethods = "createCity")
+    @Test(dependsOnMethods = "createCity", alwaysRun = true)
     public void modifyCity() {
     	// To Check if Skips
     	Assert.assertTrue(false);
         Reporter.log("Noida=>SmartNoida", true);
     }
 
-    @Test(dependsOnMethods = "modifyCity", alwaysRun = true)
+    @Test(dependsOnMethods = "modifyCity")
     public void deleteCity() {
         Reporter.log("SmartNoida deleted", true);
     }

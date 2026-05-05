@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="helper_att.LearningDataProvider">
+      <class name="helper_att.sampleDependson">
         <methods>
-          <include name="fbLogin"/>
+          <include name="deleteCity"/>
+          <include name="modifyCity"/>
+          <include name="createCity"/>
         </methods>
-      </class> <!-- helper_att.LearningDataProvider -->
+      </class> <!-- helper_att.sampleDependson -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
