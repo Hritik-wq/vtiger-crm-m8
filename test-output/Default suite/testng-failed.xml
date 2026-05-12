@@ -3,15 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="crm.vtiger.organization.CreateOrgTestBaseC">
+      <class name="crm.vtiger.organization.CreateOrgTestExtentRep">
         <methods>
           <include name="logout"/>
-          <include name="closeBro"/>
-          <include name="createOrgBaseTest"/>
           <include name="setUp"/>
+          <include name="closeBro"/>
+          <include name="createOrganizationTest"/>
           <include name="login"/>
         </methods>
-      </class> <!-- crm.vtiger.organization.CreateOrgTestBaseC -->
+      </class> <!-- crm.vtiger.organization.CreateOrgTestExtentRep -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
