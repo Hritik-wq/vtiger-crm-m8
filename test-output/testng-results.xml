@@ -1,97 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
-    <line>
-      <![CDATA[created Noida]]>
-    </line>
   </reporter-output>
-  <suite started-at="2026-05-05T17:27:07 IST" name="Default suite" finished-at="2026-05-05T17:27:07 IST" duration-ms="56">
+  <suite started-at="2026-05-12T08:25:47 IST" name="Default suite" finished-at="2026-05-12T08:26:10 IST" duration-ms="22346">
     <groups>
     </groups>
-    <test started-at="2026-05-05T17:27:07 IST" name="Default test" finished-at="2026-05-05T17:27:07 IST" duration-ms="56">
-      <class name="helper_att.sampleDependson">
-        <test-method signature="createCity()[pri:0, instance:helper_att.sampleDependson@515c6049]" started-at="2026-05-05T17:27:07 IST" name="createCity" finished-at="2026-05-05T17:27:07 IST" duration-ms="7" status="PASS">
-          <reporter-output>
-            <line>
-              <![CDATA[created Noida]]>
-            </line>
-          </reporter-output>
-        </test-method> <!-- createCity -->
-        <test-method signature="modifyCity()[pri:0, instance:helper_att.sampleDependson@515c6049]" started-at="2026-05-05T17:27:07 IST" name="modifyCity" finished-at="2026-05-05T17:27:07 IST" depends-on-methods="helper_att.sampleDependson.createCity" duration-ms="3" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError
-at org.junit.Assert.fail(Assert.java:92)
-at org.junit.Assert.assertTrue(Assert.java:43)
-at org.junit.Assert.assertTrue(Assert.java:54)
-at helper_att.sampleDependson.modifyCity(sampleDependson.java:17)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+    <test started-at="2026-05-12T08:25:47 IST" name="Default test" finished-at="2026-05-12T08:26:10 IST" duration-ms="22346">
+      <class name="crm.vtiger.organization.CreateOrgTestBaseC">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:crm.vtiger.organization.CreateOrgTestBaseC@510f3d34]" started-at="2026-05-12T08:25:47 IST" name="setUp" finished-at="2026-05-12T08:25:48 IST" duration-ms="1097" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- modifyCity -->
-        <test-method signature="deleteCity()[pri:0, instance:helper_att.sampleDependson@515c6049]" started-at="2026-05-05T17:27:07 IST" name="deleteCity" finished-at="2026-05-05T17:27:07 IST" depends-on-methods="helper_att.sampleDependson.modifyCity" duration-ms="1" status="SKIP">
-          <exception class="java.lang.Throwable">
-            <message>
-              <![CDATA[Method helper_att.sampleDependson.deleteCity() on instance helper_att.sampleDependson@515c6049 depends on not successfully finished methods 
-[helper_att.sampleDependson.modifyCity() on instance helper_att.sampleDependson@515c6049]]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.Throwable: Method helper_att.sampleDependson.deleteCity() on instance helper_att.sampleDependson@515c6049 depends on not successfully finished methods 
-[helper_att.sampleDependson.modifyCity() on instance helper_att.sampleDependson@515c6049]
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:159)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.Throwable -->
+        </test-method> <!-- setUp -->
+        <test-method is-config="true" signature="login()[pri:0, instance:crm.vtiger.organization.CreateOrgTestBaseC@510f3d34]" started-at="2026-05-12T08:25:48 IST" name="login" finished-at="2026-05-12T08:25:51 IST" duration-ms="2649" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- deleteCity -->
-      </class> <!-- helper_att.sampleDependson -->
+        </test-method> <!-- login -->
+        <test-method signature="createOrgBaseTest()[pri:0, instance:crm.vtiger.organization.CreateOrgTestBaseC@510f3d34]" started-at="2026-05-12T08:25:51 IST" name="createOrgBaseTest" finished-at="2026-05-12T08:26:05 IST" duration-ms="14411" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrgBaseTest -->
+        <test-method is-config="true" signature="logout()[pri:0, instance:crm.vtiger.organization.CreateOrgTestBaseC@510f3d34]" started-at="2026-05-12T08:26:05 IST" name="logout" finished-at="2026-05-12T08:26:06 IST" duration-ms="956" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method is-config="true" signature="closeBro()[pri:0, instance:crm.vtiger.organization.CreateOrgTestBaseC@510f3d34]" started-at="2026-05-12T08:26:06 IST" name="closeBro" finished-at="2026-05-12T08:26:10 IST" duration-ms="3201" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBro -->
+      </class> <!-- crm.vtiger.organization.CreateOrgTestBaseC -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

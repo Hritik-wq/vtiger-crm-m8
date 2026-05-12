@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="helper_att.sampleDependson">
+      <class name="crm.vtiger.organization.CreateOrgTestBaseC">
         <methods>
-          <include name="deleteCity"/>
-          <include name="modifyCity"/>
-          <include name="createCity"/>
+          <include name="logout"/>
+          <include name="closeBro"/>
+          <include name="createOrgBaseTest"/>
+          <include name="setUp"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- helper_att.sampleDependson -->
+      </class> <!-- crm.vtiger.organization.CreateOrgTestBaseC -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
